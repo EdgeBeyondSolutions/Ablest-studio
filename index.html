@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ablest Studio — Architecture &amp; Interior Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c231d;
+    --forest:#1f3a2e;
+    --forest-deep:#132720;
+    --sage:#8fa68c;
+    --sage-pale:#e4e9de;
+    --ivory:#f6f4ee;
+    --gold:#a9863f;
+    --line:#c9d1c1;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--forest-deep);
+    margin:0;
+  }
+
+  a{color:inherit;}
+
+  img, .ph{
+    display:block;
+    width:100%;
+    object-fit:cover;
+  }
+
+  .ph{
+    background:var(--sage-pale);
+    border:1px solid var(--line);
+    color:#5b6b57;
+    font-family:'Work Sans', sans-serif;
+    font-size:0.85rem;
+    letter-spacing:.02em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:2rem;
+    min-height:280px;
+  }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 6vw;
+  }
+
+  /* ---- Nav ---- */
+  header{
+    position:sticky;
+    top:0;
+    background:rgba(246,244,238,0.92);
+    backdrop-filter:blur(6px);
+    z-index:50;
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:1.1rem;
+    padding-bottom:1.1rem;
+  }
+  .brand{
+    font-family:'Fraunces', serif;
+    font-size:1.15rem;
+    letter-spacing:.02em;
+    color:var(--forest-deep);
+  }
+  .navlinks{
+    display:flex;
+    gap:2.2rem;
+    font-size:0.92rem;
+  }
+  .navlinks a{
+    text-decoration:none;
+    color:var(--forest);
+    position:relative;
+  }
+  .navlinks a:hover{color:var(--gold);}
+
+  @media (max-width:640px){
+    .navlinks{gap:1.1rem; font-size:0.82rem;}
+  }
+
+  /* ---- Hero ---- */
+  .hero{
+    padding:9rem 0 6rem;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .eyebrow{
+    color:var(--sage);
+    font-size:0.95rem;
+    margin-bottom:1.4rem;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.6rem);
+    line-height:1.05;
+    max-width:14ch;
+  }
+  .hero p{
+    max-width:46ch;
+    margin-top:1.8rem;
+    font-size:1.08rem;
+    color:#3d473d;
+  }
+  .leaf-rule{
+    width:64px;
+    height:2px;
+    background:var(--sage);
+    margin:2.6rem 0 0;
+    position:relative;
+  }
+  .leaf-rule::after{
+    content:'';
+    position:absolute;
+    right:-10px;
+    top:-4px;
+    width:10px;
+    height:10px;
+    border-radius:0 60% 0 60%;
+    background:var(--gold);
+  }
+
+  /* ---- About ---- */
+  .about{
+    padding:5.5rem 0;
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:4rem;
+    border-bottom:1px solid var(--line);
+  }
+  .about .label{
+    color:var(--sage);
+    font-size:0.95rem;
+  }
+  .about p{
+    font-size:1.15rem;
+    color:#2b332b;
+    max-width:52ch;
+  }
+  .about p + p{margin-top:1.2rem;}
+  @media (max-width:760px){
+    .about{grid-template-columns:1fr; gap:1.4rem;}
+  }
+
+  /* ---- Projects intro ---- */
+  .projects-head{
+    padding:5rem 0 2rem;
+  }
+  .projects-head .label{color:var(--sage); font-size:0.95rem;}
+  .projects-head h2{
+    font-size:clamp(1.9rem, 4vw, 2.6rem);
+    margin-top:.6rem;
+    max-width:20ch;
+  }
+
+  /* ---- Project entries ---- */
+  .project{
+    padding:4.5rem 0;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:3.5rem;
+  }
+  .project.reverse{
+    grid-template-columns:1.15fr 0.85fr;
+  }
+  .project.reverse .p-media{order:2;}
+  .project.reverse .p-text{order:1;}
+  .project.feature{
+    grid-template-columns:1fr;
+  }
+  .project.feature .p-media{margin-bottom:2rem;}
+  .project.feature .p-media .ph{min-height:420px;}
+
+  .p-text .tag{
+    font-size:0.85rem;
+    color:var(--gold);
+    letter-spacing:.03em;
+  }
+  .p-text h3{
+    font-size:clamp(1.5rem, 3vw, 2rem);
+    margin-top:.5rem;
+  }
+  .p-text .meta{
+    font-size:0.9rem;
+    color:#5b6b57;
+    margin-top:.4rem;
+  }
+  .p-text p{
+    margin-top:1.2rem;
+    color:#2b332b;
+    max-width:52ch;
+  }
+  .p-text .facts{
+    margin-top:1.4rem;
+    padding-top:1.2rem;
+    border-top:1px solid var(--line);
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem 1.6rem;
+    font-size:0.85rem;
+    color:#5b6b57;
+  }
+  .p-text .facts span strong{color:var(--forest-deep); font-weight:500;}
+
+  @media (max-width:760px){
+    .project, .project.reverse{
+      grid-template-columns:1fr;
+    }
+    .project.reverse .p-media, .project.reverse .p-text{order:initial;}
+  }
+
+  /* ---- Contact / footer ---- */
+  footer{
+    background:var(--forest-deep);
+    color:var(--sage-pale);
+    padding:5.5rem 0 3rem;
+    margin-top:4rem;
+  }
+  footer .display{
+    color:var(--ivory);
+    font-size:clamp(1.9rem, 4vw, 2.8rem);
+    max-width:16ch;
+  }
+  footer p{
+    margin-top:1.2rem;
+    max-width:44ch;
+    color:#c3d0bd;
+  }
+  footer .contact-line{
+    margin-top:2.4rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem 2.5rem;
+    font-size:1rem;
+  }
+  footer .contact-line a{
+    text-decoration:none;
+    border-bottom:1px solid rgba(228,233,222,0.4);
+    padding-bottom:2px;
+  }
+  footer .contact-line a:hover{border-color:var(--gold); color:var(--gold);}
+  footer .fine{
+    margin-top:3.5rem;
+    padding-top:1.6rem;
+    border-top:1px solid rgba(228,233,222,0.15);
+    font-size:0.8rem;
+    color:#7f9179;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Ablest Studio</div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero wrap">
+  <div class="eyebrow">Architecture &amp; Interior Design</div>
+  <h1>Rooted in place, shaped by material.</h1>
+  <p>Ablest Studio is the independent practice of Aldo Ballesteros — biophilic, materially grounded design work spanning residential interiors, cultural buildings, and academic research.</p>
+  <div class="leaf-rule"></div>
+</section>
+
+<section class="about wrap" id="about">
+  <div class="label">About</div>
+  <div>
+    <p>My work starts with a site's own logic — its terrain, its water, its light — and lets that logic drive form, material, and program. Whether the scale is a single room or a public cultural center, the goal is the same: a building that feels native to where it stands.</p>
+    <p>Recent projects draw on regional ecology (the Edwards Aquifer, native sage), community identity, and passive environmental strategy, alongside interior work that reinterprets vernacular material palettes for contemporary life.</p>
+  </div>
+</section>
+
+<section class="wrap projects-head" id="work">
+  <div class="label">Selected Work</div>
+  <h2>Eight projects, 2024–2026</h2>
+</section>
+
+<div class="wrap">
+
+  <!-- SALVIA — feature -->
+  <article class="project feature">
+    <div class="p-media">
+      <div class="ph">Cover image — gold-trellis gallery atrium interior render<br>(images/salvia-atrium.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Sophomore Year — Spring 2026</div>
+      <h3>Salvia Modern House Museum</h3>
+      <div class="meta">337 W Commerce St, San Antonio, TX 78205</div>
+      <p>A biomimetic design inspired by <em>Salvia farinacea</em>, stacking public program over private retreat: lobby and café, two art galleries, a community hub, two artist's lofts, and a rooftop vinothèque. Built from concrete, black cherry wood, dwarf yaupon, and glass, and shaped throughout by COTE strategies for integration, community, ecology, water, and energy — passive stack-effect ventilation, rainwater harvesting, an on-site PV system, and native drought-tolerant planting.</p>
+      <div class="facts">
+        <span><strong>Program</strong> — galleries, lofts, community hub</span>
+        <span><strong>Materials</strong> — concrete, black cherry, glass</span>
+        <span><strong>Strategy</strong> — COTE / passive systems</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- LA RAIZ -->
+  <article class="project">
+    <div class="p-media">
+      <div class="ph">La Raíz — exterior render<br>(images/la-raiz-01.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Architecture at Zero 2026 — Student Division</div>
+      <h3>La Raíz <span style="font-weight:300; color:#5b6b57;">(The Root)</span></h3>
+      <div class="meta">Antelope Valley Fair &amp; Event Center, Lancaster, CA</div>
+      <p>A 10,000 sf, two-story, all-electric biophilic cultural center and emergency operations center for the Antelope Valley. Two programs share one building: "La Plaza Viva," for everyday cultural life, and "Centro de Mando," for emergency response. Rammed earth walls sit beneath an arched bifacial photovoltaic canopy, targeting a net-negative energy use intensity of −1 kBtu/sf·yr. The proposal is grounded in an equity essay tying the design to Lancaster's Latino community.</p>
+      <div class="facts">
+        <span><strong>Size</strong> — 10,000 sf</span>
+        <span><strong>Target</strong> — Net EUI −1 kBtu/sf·yr</span>
+        <span><strong>Structure</strong> — rammed earth + PV canopy</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- AQUILO FLOW -->
+  <article class="project reverse">
+    <div class="p-media">
+      <div class="ph">Aquilo Flow — pavilion &amp; pool render<br>(images/aquilo-flow-01.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Sophomore Year — Fall 2025</div>
+      <h3>Aquilo Flow</h3>
+      <p>A research space drawn from the Edwards Aquifer — its movement, its scarcity, its mineral identity of calcium and magnesium — translated into flow, layering, and filtered light. A long, linear, slatted pavilion sits on a terraced site above a black resin pool, framed by plantings of dried baby's breath.</p>
+      <div class="facts">
+        <span><strong>Site</strong> — terraced, water-adjacent</span>
+        <span><strong>Form</strong> — linear slatted pavilion</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- CASA JACARANDA -->
+  <article class="project">
+    <div class="p-media">
+      <div class="ph">Casa Jacaranda — Sala entre Muros<br>(images/casa-jacaranda-sala.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Interior Design — 2026</div>
+      <h3>Casa Jacaranda</h3>
+      <p>An interior reimagining for a client who wanted her residence to reflect contemporary Mexican identity without a full remodel — achieved through furniture, lighting, textiles, and artesanía, drawing on contemporary Mexico City residential design. The palette moves through marfil cálido, arena, terracota, arcilla, café tabaco, nogal, and verde olivo across three documented rooms: Sala entre Muros, Cocina Raíz, and Comedor Raíz.</p>
+      <div class="facts">
+        <span><strong>Scope</strong> — furniture, lighting, textiles</span>
+        <span><strong>Rooms</strong> — sala, cocina, comedor</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ASANA HAUS -->
+  <article class="project reverse">
+    <div class="p-media">
+      <div class="ph">Asana Haus — pavilion render<br>(images/asana-haus-01.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Freshman Year — Spring 2025</div>
+      <h3>Asana Haus</h3>
+      <p>A hexagonal, organic-footprint pavilion built around curved walls and a single blue glazing accent — an early study in departing from orthogonal form.</p>
+    </div>
+  </article>
+
+  <!-- TERRAVISTA -->
+  <article class="project">
+    <div class="p-media">
+      <div class="ph">Terravista — hillside model<br>(images/terravista-01.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Freshman Year — Fall 2024</div>
+      <h3>Terravista</h3>
+      <p>A hillside model built around terraced, cut-strip contour terrain, with a cantilevered stair-bridge, green roofs, and a planted wall niche set into the slope.</p>
+    </div>
+  </article>
+
+  <!-- EMERALD SPRING HILL -->
+  <article class="project reverse">
+    <div class="p-media">
+      <div class="ph">Emerald Spring Hill — venue render<br>(images/emerald-spring-hill-01.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Estate &amp; Events Venue</div>
+      <h3>Emerald Spring Hill</h3>
+      <p>A luxury estate wedding and events venue, designed as a destination site for celebration and gathering.</p>
+    </div>
+  </article>
+
+  <!-- CASA TERRA -->
+  <article class="project">
+    <div class="p-media">
+      <div class="ph">Casa Terra<br>(images/casa-terra-01.jpg)</div>
+    </div>
+    <div class="p-text">
+      <div class="tag">Residential</div>
+      <h3>Casa Terra</h3>
+      <p>Details and imagery to be added.</p>
+    </div>
+  </article>
+
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="display">Let's talk about a project.</div>
+    <p>Open to architecture and interior design collaborations — residential, cultural, and academic.</p>
+    <div class="contact-line">
+      <a href="mailto:hello@ablest.studio">hello@ablest.studio</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+    <div class="fine">Ablest Studio — Aldo Ballesteros</div>
+  </div>
+</footer>
+
+</body>
+</html>
