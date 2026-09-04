@@ -1,0 +1,27 @@
+# Ablest Studio
+
+> Ablest Studio is the independent architecture and design practice of Aldo Ballesteros, creating refined spaces shaped by materiality, atmosphere, context, and human experience.
+
+Ablest Studio is an architecture-student portfolio practice (not a multi-person firm) based in San Antonio, TX. Aldo Ballesteros works across residential architecture, cultural buildings, interiors, and academic research.
+
+## Contact
+- Email: hello@ableststudio.com
+- LinkedIn: https://www.linkedin.com/in/aldo-ballesteros-1191743b1/
+- Instagram: https://www.instagram.com/m_aldob/
+
+## Site Structure
+- / — Home
+- /work.html — Project archive (filterable by Architecture, Interiors, Hospitality, Residential, Commercial)
+- /about.html — Studio profile and design principles
+- /services.html — Services offered
+- /journal.html — Articles on architecture, materials, and design
+- /contact.html — Inquiry form
+
+## Selected Work
+- Salvia Modern House Museum — biomimetic mixed-use building, San Antonio, TX (Spring 2026)
+- La Raíz (The Root) — biophilic cultural + emergency operations center, Lancaster, CA (Architecture at Zero 2026 competition)
+- Aquilo Flow — research pavilion inspired by the Edwards Aquifer (Fall 2025)
+- Casa Jacaranda — interior design, contemporary Mexican residential identity (2026)
+- Asana Haus — hexagonal pavilion study (Spring 2025)
+- Terravista — hillside terrain model (Fall 2024)
+- Emerald Spring Hill — luxury estate & events venue, Texas Hill Country (completed)
