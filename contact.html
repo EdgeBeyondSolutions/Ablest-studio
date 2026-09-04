@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ablest Studio</title>
+<meta name="description" content="Get in touch with Ablest Studio about a residential, hospitality, commercial, or cultural architecture project.">
+<link rel="canonical" href="https://edgebeyondsolutions.github.io/Ablest-studio/contact.html">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#18140f">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ablest Studio">
+<meta property="og:title" content="Contact — Ablest Studio">
+<meta property="og:description" content="Get in touch with Ablest Studio about a residential, hospitality, commercial, or cultural architecture project.">
+<meta property="og:image" content="https://edgebeyondsolutions.github.io/Ablest-studio/images/og-cover.jpg">
+<meta property="og:url" content="https://edgebeyondsolutions.github.io/Ablest-studio/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Ablest Studio">
+<meta name="twitter:description" content="Get in touch with Ablest Studio about a residential, hospitality, commercial, or cultural architecture project.">
+<meta name="twitter:image" content="https://edgebeyondsolutions.github.io/Ablest-studio/images/og-cover.jpg">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header class="site-header">
+    <a href="index.html" class="brand"><img src="images/logo-mark.png" alt="Ablest Studio monogram">ABLEST STUDIO</a>
+    <nav class="primary-nav">
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="journal.html">Journal</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+<section class="section wrap" style="padding-top:9rem;">
+  <div class="eyebrow reveal">Contact</div>
+  <h1 class="reveal" style="margin-top:1rem; font-size:clamp(2.2rem,4.5vw,3.6rem); max-width:16ch;">Let's create something distinctive.</h1>
+  <p class="reveal" style="margin-top:1.6rem; max-width:56ch; color:var(--charcoal-soft); font-size:1.05rem;">Whether you are developing a private residence, hospitality destination, commercial environment, or a new architectural vision, we would love to hear about your project.</p>
+
+  <div class="contact-grid reveal" style="margin-top:5rem;">
+    <div class="contact-info">
+      <h3>General Inquiries</h3>
+      <a href="mailto:hello@ableststudio.com">hello@ableststudio.com</a>
+
+      <h3>Studio</h3>
+      <p>San Antonio, TX</p>
+
+      <h3>Follow</h3>
+      <a href="https://www.linkedin.com/in/aldo-ballesteros-1191743b1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/m_aldob/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <form id="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="field-row">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company" type="text"></div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="project_type">Project Type</label>
+          <select id="project_type" name="project_type">
+            <option>Residential</option>
+            <option>Hospitality</option>
+            <option>Commercial</option>
+            <option>Interiors</option>
+            <option>Cultural</option>
+            <option>Master Planning</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="location">Location</label><input id="location" name="location" type="text"></div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="budget">Estimated Budget</label>
+          <select id="budget" name="budget">
+            <option>Under $250k</option>
+            <option>$250k – $500k</option>
+            <option>$500k – $1M</option>
+            <option>$1M – $5M</option>
+            <option>$5M+</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="timeline">Project Timeline</label>
+          <select id="timeline" name="timeline">
+            <option>Immediate</option>
+            <option>3 – 6 months</option>
+            <option>6 – 12 months</option>
+            <option>12+ months</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+      <button type="submit" class="btn btn-dark">Submit Inquiry</button>
+      <p class="form-note" id="form-status"></p>
+    </form>
+    <div class="form-success">Thank you — your inquiry has been received. We'll be in touch shortly.</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+    <div class="wrap">
+      <div class="f-top">
+        <div class="f-brand">ABLEST STUDIO</div>
+        <div class="f-col">
+          <h5>Navigate</h5>
+          <a href="work.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="journal.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="f-col">
+          <h5>Studio</h5>
+          <a href="mailto:hello@ableststudio.com">hello@ableststudio.com</a>
+          <a href="https://www.linkedin.com/in/aldo-ballesteros-1191743b1/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/m_aldob/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="f-col">
+          <h5>Based In</h5>
+          <a href="contact.html">San Antonio, TX</a>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <span>&copy; 2026 Ablest Studio &mdash; Aldo Ballesteros. All rights reserved.</span>
+        <span>Site by Ablest Studio</span>
+      </div>
+    </div>
+  </footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
